@@ -16,7 +16,7 @@ import java.util.List;
  * <p />Reference: https://www.primafelicitas.com/Insights/blockchain-data-structure/
  */
 @Value
-@Builder(setterPrefix = "with")
+@Builder(setterPrefix = "with", toBuilder = true)
 @JsonDeserialize(builder = Block.BlockBuilder.class)
 public class Block {
     /**
@@ -37,15 +37,12 @@ public class Block {
      * which is not a feasible option.
      */
     @JsonInclude(JsonInclude.Include.NON_EMPTY)
-    private final Block lhs;
-
-    @JsonInclude(JsonInclude.Include.NON_EMPTY)
-    private final Block rhs;
+    private final Block parent;
 
     /**
      *  stores a count of the number of transactions added in the block.
      */
-    private final BigInteger numTx;
+    private final Integer numTx;
 
     /**
      * stores the time details of when the block was created.

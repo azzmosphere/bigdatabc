@@ -35,6 +35,11 @@ public class Hash implements Serializable {
         this.hash = hex;
     }
 
+    /**
+     * Digest expressed in bytes.
+     *
+     * @param digest bytes
+     */
     public Hash(byte[] digest) {
         this.hash = digest;
     }
