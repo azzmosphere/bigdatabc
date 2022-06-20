@@ -99,6 +99,14 @@ public class MerkleTreeImpl implements MerkleTree {
         final byte[] c = new byte[a.getHash().length + b.getHash().length];
         System.arraycopy(a.getHash(), 0, c, 0, a.getHash().length);
         System.arraycopy(b.getHash(), 0, c, a.getHash().length, b.getHash().length);
-        return new Hash(c);
+        Hash sha256hash;
+        try {
+            final MessageDigest digest = MessageDigest.getInstance(HASH_ALGO);
+            sha256hash = new Hash(digest.digest(c));
+
+        } catch (NoSuchAlgorithmException ex) {
+            throw new BcNoSuchAlgorithmException("unable to create block", ex);
+        }
+        return sha256hash;
     }
 }
