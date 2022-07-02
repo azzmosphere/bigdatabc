@@ -8,7 +8,6 @@ import lombok.Value;
 
 import java.math.BigInteger;
 import java.util.Date;
-import java.util.List;
 
 /**
  * Single block within the block chain.
@@ -53,13 +52,4 @@ public class Block {
      * stores the integer (32 or 64bits) that are used in the mining process.
      */
     private final BigInteger nonce;
-
-    // probally don't need to include the transactions to save space, these can be implied
-    // if they are wrong then the algorithm won't work.
-    /**
-     * This is another field stored as arrays in the body of the block. They store the
-     * complete summary of transaction performed so far in the block. Here, data storage
-     * is done with the help of another data structure called Merkle trees.
-     */
-    //private final List transaction;
 }
