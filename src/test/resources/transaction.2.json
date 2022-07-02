@@ -1,14 +1,11 @@
 [
   {
-    "traceId": "b1410db8-558f-4b20-a33f-93104f42e8d3",
-    "spanId": "2d48ce0f-a917-46d7-869d-3bd84198a7d1"
+    "jediList": ["Luke Skywalker", "Ahsoka Tano", "Windu Mace", "Ezra Bridger", "Shaak Ti", "Yarael Poof"]
   },
   {
-    "traceId": "bce48c74-106d-44cf-9c1c-36490f0ddff2",
-    "spanId": "53ad07a0-2527-4062-bdbe-929653486f7e"
+    "planetList": ["Endor", "Mandolore", "Naboo", "Tatoorine"]
   },
   {
-    "traceId": "252a67e5-9090-4e3c-a1a2-0c8b88b2cea3",
-    "spanId": "aa2f4e16-bbe1-4e0f-bd01-56373b0be475"
+    "bountyHunters": ["Bobba Fett", "IG-88", "Asajj Ventress", "Cad Bane"]
   }
 ]

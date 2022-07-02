@@ -50,7 +50,7 @@ public class TestMerkleTree {
         assertEquals(BigInteger.ONE, merkleTreeContainer.getLastNode().getIndex());
         assertEquals(3, merkleTreeContainer.getLastNode().getNumTx());
         assertEquals(
-                "836788b54d8452b754bc735f0620852ff8d840d1aa0e733ec07cb14c51178e3b",
+                "bac243b77f37ed8510689faf303bb69002cb4bbf93de378ee9f6a1958575fc7b",
                 merkleTreeContainer.getLastNode().getHash().toString()
         );
         System.out.println(merkleTreeContainer.getLastNode().getHash());

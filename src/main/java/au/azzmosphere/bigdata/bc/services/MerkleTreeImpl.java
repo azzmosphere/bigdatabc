@@ -38,7 +38,7 @@ public class MerkleTreeImpl implements MerkleTree {
     }
 
     /**
-     * newly created node, that has not been added to tree.
+     * Add node (leaf) to tree.
      *
      * @param node node to add.
      * @param merkleTree current merkle tree
@@ -49,7 +49,7 @@ public class MerkleTreeImpl implements MerkleTree {
         final Block parent = merkleTree.getLastNode();
         final Hash nodeHash = node.getHash();
         final Hash conHash = concatenate(parent.getHash(), nodeHash);
-        final BigInteger index = parent.getIndex().add(BigInteger.valueOf(1));
+        final BigInteger index = parent.getIndex().add(BigInteger.ONE);
 
         final Block newNode = node.toBuilder()
                 .withIndex(index)
@@ -76,7 +76,6 @@ public class MerkleTreeImpl implements MerkleTree {
 
             block = Block.builder()
                     .withHash(sha256hash)
-                    .withTransaction(transactions)
                     .withTimestamp(new Date())
                     .withNumTx(transactions.size())
                     .build();
